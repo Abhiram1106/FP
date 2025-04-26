@@ -1,0 +1,156 @@
+/* General Styles for Register Page */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f4f4f9, #e0e0e8);
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main-content {
+    background: #fff;
+    margin-top: 70px;
+    padding: 6rem 2rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Heading Styles */
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background: #3498db;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Match Details Section */
+.match-details {
+    margin-bottom: 1.5rem;
+}
+
+.match-details p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0.5rem 0;
+}
+
+.match-details strong {
+    color: #2c3e50;
+}
+
+/* Form Styles */
+form {
+    margin-top: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+select,
+input[type="text"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+select:focus,
+input[type="text"]:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Button Styles */
+.btn {
+    background: linear-gradient(90deg, #3498db, #2980b9);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #2980b9, #3498db);
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .main-content {
+        padding: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .match-details p {
+        font-size: 0.9rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+    }
+}

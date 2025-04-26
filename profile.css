@@ -1,0 +1,278 @@
+/* --------------------------
+   Profile Page Styles
+--------------------------- */
+:root {
+    --primary-color: #4051b5;
+    --accent-color: #28a745;
+    --secondary-color: #6c757d;
+    --error-color: #dc3545;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --spacing-unit: 16px;
+    --nav-bar-height: 60px; /* Adjust this value based on your nav bar height */
+    --transition-speed: 0.3s;
+}
+
+/* Background Image Styling */
+body {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Arial', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* General Container Styling */
+.container {
+    width: 100vw;
+    min-height: calc(100vh - var(--nav-bar-height));
+    margin: 0 auto;
+    padding-top: calc(var(--nav-bar-height) + 70px);
+    padding-left: calc(var(--spacing-unit) * 2);
+    padding-right: calc(var(--spacing-unit) * 2);
+    padding-bottom: var(--spacing-unit);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Profile Card Styling */
+.profile-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.profile-card p {
+    color: #555;
+    font-size: 1.1rem;
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+.profile-card p strong {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Profile Picture Styling */
+.profile-pic {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic img {
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.profile-pic img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styling */
+button {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0.5rem;
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: #33408f;
+    transform: translateY(-2px);
+}
+
+.update-button1 {
+    background-color: var(--accent-color);
+}
+
+.update-button1:hover {
+    background-color: #218838;
+}
+
+.back-button {
+    background-color: var(--secondary-color);
+}
+
+.back-button:hover {
+    background-color: #5a6268;
+}
+
+/* Logout Button Styling */
+.logout-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: var(--error-color);
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+    font-weight: 500;
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
+
+/* Error Message Styling */
+p.error-message {
+    color: var(--error-color);
+    font-size: 1rem;
+    margin-bottom: var(--spacing-unit);
+    font-weight: 500;
+    animation: shake 0.5s ease-in-out;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #555;
+    transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 8px rgba(64, 81, 181, 0.3);
+}
+
+/* Update Button Styling */
+.update-button {
+    background-color: var(--accent-color);
+    color: var(--text-light);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+    font-weight: 500;
+}
+
+.update-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* Style for the Remove Profile Picture checkbox */
+.form-group label[for="remove_profile_pic"] {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+.form-group label[for="remove_profile_pic"] input {
+    margin-right: 8px;
+}
+
+/* Responsive Design for Profile Page */
+@media (max-width: 768px) {
+    .container {
+        padding-top: calc(var(--nav-bar-height) + 80px);
+        padding-left: var(--spacing-unit);
+        padding-right: var(--spacing-unit);
+    }
+
+    .profile-card {
+        padding: 20px;
+    }
+
+    .profile-card h2 {
+        font-size: 2rem;
+    }
+
+    .profile-card p {
+        font-size: 1rem;
+    }
+
+    .profile-pic img {
+        width: 120px;
+        height: 120px;
+    }
+
+    button,
+    .logout-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+}

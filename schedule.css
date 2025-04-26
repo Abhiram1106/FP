@@ -1,0 +1,358 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f4f4f9, #e0e0e8);
+    margin-top: 50px;
+    padding: 0;
+    color: #333;
+    min-height: 100vh;
+}
+
+.main-content {
+    padding: 6rem 2rem 2rem;
+    width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background: #3498db;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+.back-button {
+    position: absolute;
+    top: 15px;
+    right: 15px; /* Position in the top right corner */
+    z-index: 1000; /* Ensures the button stays on top of other elements */
+}
+
+.btn-back {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    text-decoration: none;
+    border: none; /* Remove default button border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.btn-back:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.btn-back:active {
+    transform: translateY(0); /* Reset lift effect when clicked */
+}
+/* Matches List / Games List */
+.matches-list,
+.games-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.match-card,
+.game-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 300px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.match-card:hover,
+.game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.match-card::before,
+.game-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #3498db, #e74c3c);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.match-card:hover::before,
+.game-card:hover::before {
+    opacity: 1;
+}
+
+.match-card h3,
+.game-card h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.match-card p,
+.game-card p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0.5rem 0;
+}
+
+.match-card .btn,
+.game-card .btn {
+    display: inline-block;
+    background: linear-gradient(90deg, #3498db, #2980b9);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.match-card .btn:hover,
+.game-card .btn:hover {
+    background: linear-gradient(90deg, #2980b9, #3498db);
+    transform: scale(1.05);
+}
+
+/* Add Match Form / Add Game Form */
+.add-match-form,
+.add-game-form {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-top: 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.add-match-form::before,
+.add-game-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #e74c3c, #3498db);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.add-match-form:hover::before,
+.add-game-form:hover::before {
+    opacity: 1;
+}
+
+.add-match-form h3,
+.add-game-form h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.add-match-form label,
+.add-game-form label {
+    display: block;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.add-match-form input,
+.add-game-form input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.add-match-form input:focus,
+.add-game-form input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+    outline: none;
+}
+
+.add-match-form button,
+.add-game-form button {
+    width: 100%;
+    background: linear-gradient(90deg, #3498db, #2980b9);
+    color: #fff;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.add-match-form button:hover,
+.add-game-form button:hover {
+    background: linear-gradient(90deg, #2980b9, #3498db);
+    transform: scale(1.05);
+}
+
+/* Register Section */
+.register-section {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.register-section .btn {
+    display: inline-block;
+    background: linear-gradient(90deg, #3498db, #2980b9);
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.register-section .btn:hover {
+    background: linear-gradient(90deg, #2980b9, #3498db);
+    transform: scale(1.05);
+}
+
+/* Add Match Link / Add Game Link */
+.add-match-link,
+.add-game-link {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.add-match-link .btn,
+.add-game-link .btn {
+    display: inline-block;
+    background: linear-gradient(90deg, #3498db, #2980b9);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.add-match-link .btn:hover,
+.add-game-link .btn:hover {
+    background: linear-gradient(90deg, #2980b9, #3498db);
+    transform: scale(1.05);
+}
+
+/* Checkbox Section */
+.checkbox-section {
+    margin: 1rem 0;
+}
+
+.checkbox-section label {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #555;
+}
+
+.checkbox-section input[type="checkbox"] {
+    margin-right: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+}
+
+/* Games Selection */
+.games-selection {
+    margin: 1.5rem 0;
+}
+
+.games-selection h3 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.games-selection .checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.games-selection label {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #555;
+    background-color: #f9f9f9;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.games-selection label:hover {
+    background-color: #f1f1f1;
+    transform: translateY(-2px);
+}
+
+.games-selection input[type="checkbox"] {
+    margin-right: 0.8rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .matches-list,
+    .games-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .match-card,
+    .game-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .add-match-form,
+    .add-game-form {
+        padding: 1.5rem;
+    }
+}

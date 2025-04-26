@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings Page</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .settings-container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            width: 90%;
+            max-width: 800px;
+            height: 90vh;
+            max-height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .settings-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .settings-container h1 {
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .settings-list {
+            list-style-type: none;
+            flex: 1;
+            overflow-y: auto;
+            padding-right: 1rem;
+        }
+
+        .setting-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #eaeaea;
+            transition: background-color 0.3s ease;
+        }
+
+        .setting-item:last-child {
+            border-bottom: none;
+        }
+
+        .setting-item:hover {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .setting-label {
+            font-size: 1rem;
+            color: #34495e;
+            font-weight: 500;
+        }
+
+        .setting-button {
+            background-color: #e9ecef;
+            color: #495057;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+        }
+
+        .setting-button:hover {
+            background-color: #007bff;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .setting-button:active {
+            transform: translateY(0);
+        }
+
+        /* Scrollbar Styling */
+        .settings-list::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .settings-list::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+
+        .settings-list::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 4px;
+        }
+
+        .settings-list::-webkit-scrollbar-thumb:hover {
+            background: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="settings-container">
+        <h1>Settings</h1>
+        <ul class="settings-list">
+            <li class="setting-item">
+                <span class="setting-label">Account Information</span>
+                <button class="setting-button">Edit</button>
+            </li>
+            <li class="setting-item">
+                <span class="setting-label">Privacy Settings</span>
+                <button class="setting-button">Edit</button>
+            </li>
+            <li class="setting-item">
+                <span class="setting-label">Notification Preferences</span>
+                <button class="setting-button">Edit</button>
+            </li>
+            <li class="setting-item">
+                <span class="setting-label">Theme Customization</span>
+                <button class="setting-button">Edit</button>
+            </li>
+            <li class="setting-item">
+                <span class="setting-label">Language</span>
+                <button class="setting-button">Edit</button>
+            </li>
+            <!-- Add more items if needed -->
+            <li class="setting-item">
+                <span class="setting-label">Security Settings</span>
+                <button class="setting-button">Edit</button>
+            </li>
+            <li class="setting-item">
+                <span class="setting-label">Billing Information</span>
+                <button class="setting-button">Edit</button>
+            </li>
+            <li class="setting-item">
+                <span class="setting-label">Accessibility</span>
+                <button class="setting-button">Edit</button>
+            </li>
+            <li class="setting-item">
+                <span class="setting-label">Data Usage</span>
+                <button class="setting-button">Edit</button>
+            </li>
+            <li class="setting-item">
+                <span class="setting-label">Help & Support</span>
+                <button class="setting-button">Edit</button>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
